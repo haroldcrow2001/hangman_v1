@@ -1,0 +1,61 @@
+import random
+l=[]
+
+t = open('nouns.txt')
+t = ''.join(t)
+t = t.split('\n')
+
+while 1:
+    r = random.randint(0,len(t)+1)
+    word = t[r]
+    if len(word) <= 5:
+        #print 'The word is: %s' % word
+        break
+    else:
+        pass
+
+
+#word = 'ballgag'
+
+
+l = []
+for a in word:
+    l.append('_')
+#print l
+import os
+c = -1
+print word
+print
+#you get 6 misses
+counter = 0
+
+#l=''.join(l)
+#print 'L: %s' % l
+while counter < 7:
+    print('Counter: %s' %(counter))
+    c=-1
+    data=raw_input("Guess: ")
+    for b in word:
+        c+=1
+        if b == data: #if your guess is right
+            l[c]=b
+            determiner=True
+            os.system("cls")
+            j = ''.join(l)
+            if j == word:
+                os.system("cls")
+                print("YOU WON!!!")
+                raw_input()
+            else:
+                print
+                print j
+        else: #if your guess is wrong
+            counter+=1/len(word)
+            pass
+
+
+    
+if counter > 6:
+    os.system("cls")
+    print 'YOU LOSE :('
+    raw_input()
