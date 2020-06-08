@@ -26,7 +26,7 @@ import os
 c = -1
 print word
 print
-#you get 6 misses
+#you get 6 misses -- EDIT: Haven't perfected the scoring system yet 
 counter = 0
 
 #l=''.join(l)
